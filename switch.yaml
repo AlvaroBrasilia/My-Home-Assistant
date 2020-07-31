@@ -1,0 +1,38 @@
+# App TTLock Integration
+#  _______ _______ _                _      _____       _                       _   _             
+# |__   __|__   __| |              | |    |_   _|     | |                     | | (_)            
+#    | |     | |  | |     ___   ___| | __   | |  _ __ | |_ ___  __ _ _ __ __ _| |_ _  ___  _ __  
+#    | |     | |  | |    / _ \ / __| |/ /   | | | '_ \| __/ _ \/ _` | '__/ _` | __| |/ _ \| '_ \ 
+#    | |     | |  | |___| (_) | (__|   <   _| |_| | | | ||  __/ (_| | | | (_| | |_| | (_) | | | |
+#    |_|     |_|  |______\___/ \___|_|\_\ |_____|_| |_|\__\___|\__, |_|  \__,_|\__|_|\___/|_| |_|
+#                                                               __/ |                            
+#                                                              |___/                             
+# https://open.ttlock.com/
+# https://open.ttlock.com/doc/api
+# https://play.google.com/store/apps/details?id=com.tongtongsuo.app
+# https://apps.apple.com/us/app/ttlock/id1033046018
+
+  - platform: command_line
+    switches:
+      lock_door:
+        friendly_name: 'Porta da Frente'
+        command_on:  'curl -k "https://api.ttlock.com/v3/lock/unlock?clientId=074b150b53d242e6a92cc886b75cb8f3&accessToken=8a92c9fcadec9e24f97c017f1b1015b3&lockId=1714418&date=${date +%s}"'
+        command_off: 'curl -k "https://api.ttlock.com/v3/lock/lock?clientId=074b150b53d242e6a92cc886b75cb8f3&accessToken=8a92c9fcadec9e24f97c017f1b1015b3&lockId=1714418&date=${date +%s}"'
+
+
+  - platform: command_line
+    switches:
+      lock_door_curl:
+        friendly_name: 'Porta da Frente'
+        command_on: 'curl -k "https://api.ttlock.com/v3/lock/lock?clientId=074b150b53d242e6a92cc886b75cb8f3&accessToken=8a92c9fcadec9e24f97c017f1b1015b3&lockId=1714418&date=$(($(date +%s)*1000))"'
+        command_off: 'curl -k "https://api.ttlock.com/v3/lock/unlock?clientId=074b150b53d242e6a92cc886b75cb8f3&accessToken=8a92c9fcadec9e24f97c017f1b1015b3&lockId=1714418&date=$(($(date +%s)*1000))"'
+        command_state: 'curl -s "https://api.ttlock.com/v3/lock/queryOpenState?clientId=074b150b53d242e6a92cc886b75cb8f3&accessToken=8a92c9fcadec9e24f97c017f1b1015b3&lockId=1714418&date=$(($(date +%s)*1000))" | jq ".state"'
+        #command_state: 'curl -XPOST -d "clientId=074b150b53d242e6a92cc886b75cb8f3&accessToken=8a92c9fcadec9e24f97c017f1b1015b3&lockId=1714418&date=$(($(date +%s)*1000))" "https://api.ttlock.com/v3/lock/queryOpenState" | jq ".state"'
+        value_template: '{{ value == "0" }}'
+        #device_class: lock
+        # value_template: >-
+        #   {% if states('binary_sensor.lock_open_state') == "on" %}
+        #     {{ value == "1" }}
+        #   {% else %}
+        #     {{ value == "0" }}
+        #   {% endif %}

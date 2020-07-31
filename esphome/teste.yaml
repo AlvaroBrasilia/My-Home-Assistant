@@ -1,0 +1,16 @@
+esphome:
+  name: teste
+  platform: ESP8266
+  board: esp01_1m
+
+wifi:
+  ssid: "Wi-Fi Gratis"
+  password: "smartcasa"
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:

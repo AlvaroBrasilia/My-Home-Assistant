@@ -1,0 +1,204 @@
+
+resources:
+  - type: module
+    url: /community_plugin/mini-graph-card/mini-graph-card-bundle.js
+  - type: module
+    url: /community_plugin/button-card/button-card.js
+title: Home
+views:
+  - badges: []
+      cards:
+        - custom_fields:
+            icone: |
+              [[[
+                return `<b>HassOS</b><br><ha-icon
+                  icon="mdi:raspberry-pi"
+                  style="width: 40px; height: 40px;">
+                  </ha-icon><br></span>
+                  <ha-icon
+                  icon="mdi:radioactive"
+                  style="width: 18px; height: 16px; color: red;">
+                  </ha-icon><span> <span style="color: var(--text-color-sensor);">${states['sensor.processor_use'].state}%</span></span>`
+              ]]]
+            ram: |
+              [[[
+                return `<ha-icon
+                  icon="mdi:memory"
+                  style="width: 22px; height: 18px; color: #C51162;">
+                  </ha-icon><span>RAM: <span style="color: var(--text-color-sensor);"><b>${states['sensor.memory_free'].state}</b> MB</span></span>`
+              ]]]
+            ramuse: |
+              [[[
+                return `<ha-icon
+                  icon="mdi:memory"
+                  style="width: 22px; height: 18px; color: #C51162;">
+                  </ha-icon><span><span style="color: var(--text-color-sensor);"><b>${states['sensor.memory_use_percent'].state}</b>%</span></span>`
+              ]]]
+            sd: |
+              [[[
+                return `<ha-icon
+                  icon="mdi:harddisk"
+                  style="width: 22px; height: 18px; color: #8BC34A;">
+                  </ha-icon><span>SD: <span style="color: var(--text-color-sensor);"><b>${states['sensor.disk_free'].state}</b> GB</span></span>`
+              ]]]
+            sduse: |
+              [[[
+                return `<ha-icon
+                  icon="mdi:harddisk"
+                  style="width: 22px; height: 18px; color: #8BC34A;">
+                  </ha-icon><span><span style="color: var(--text-color-sensor);"><b>${states['sensor.disk_use_percent'].state}</b>%</span></span>`
+              ]]]
+            temp: |
+              [[[
+                return `<ha-icon
+                  icon="mdi:thermometer"
+                  style="width: 22px; height: 18px; color: yellow;">
+                  </ha-icon><span><b>${entity.state}</b>°C</span>`
+              ]]]
+            versao: |
+              [[[
+                return `<ha-icon
+                  icon="mdi:settings"
+                  style="width: 22px; height: 18px; color: deepskyblue;">
+                  </ha-icon><span>Versão: <span style="color: var(--text-color-sensor);"><b>${states['sensor.versao'].state}</b></span></span>`
+              ]]]
+          entity: sensor.cpu_temperatura
+          layout: icon_state_name2nd
+          show_icon: false
+          show_name: false
+          show_state: false
+          styles:
+            card:
+              - padding: 10%
+              - font-size: 15px
+            custom_fields:
+              icone:
+                - position: absolute
+                - left: 77%
+                - top: 5%
+              ram:
+                - position: absolute
+                - left: 2%
+                - top: 70%
+              ramuse:
+                - position: absolute
+                - left: 35%
+                - top: 70%
+              sd:
+                - position: absolute
+                - left: 2%
+                - top: 40%
+              sduse:
+                - position: absolute
+                - left: 35%
+                - top: 40%
+              temp:
+                - position: absolute
+                - left: 35%
+                - top: 10%
+              versao:
+                - position: absolute
+                - left: 2%
+                - top: 10%
+          type: 'custom:button-card'
+        - cards:
+            - cards:
+                - color_thresholds:
+                    - color: '#03A9F4'
+                      value: 40
+                    - color: '#66BB6A'
+                      value: 45
+                    - color: '#E65100'
+                      value: 50
+                  entities:
+                    - sensor.cpu_temperatura
+                  hours_to_show: 24
+                  line_width: 4
+                  name: Temperatura 24h
+                  points_per_hour: 4
+                  show:
+                    extrema: true
+                    fill: false
+                  type: 'custom:mini-graph-card'
+                - color_thresholds:
+                    - color: '#03A9F4'
+                      value: 5
+                    - color: '#66BB6A'
+                      value: 10
+                    - color: '#E65100'
+                      value: 60
+                  entities:
+                    - sensor.processor_use
+                  hours_to_show: 2
+                  line_width: 4
+                  name: CPU - 2h
+                  points_per_hour: 30
+                  show:
+                    extrema: true
+                    fill: false
+                  type: 'custom:mini-graph-card'
+              type: horizontal-stack
+            - cards:
+                - entity: sensor.disk_use_percent
+                  name: SD
+                  type: gauge
+                - entity: sensor.memory_use_percent
+                  name: RAM
+                  type: gauge
+              type: horizontal-stack
+          type: vertical-stack
+        - entities:
+            - entity: binary_sensor.internet
+              name: RB2011 (RouterOS)
+            - entity: binary_sensor.google_wifi
+            - entity: binary_sensor.pc_desktop
+              icon: 'mdi:desktop-classic'
+            - entity: binary_sensor.fita_led_bancada
+              icon: 'mdi:led-strip'
+          show_header_toggle: false
+          title: Diversos
+          type: entities
+        - entities:
+            - entity: binary_sensor.broadlink_ir_quarto
+            - entity: binary_sensor.broadlink_ir_sala
+            - entity: binary_sensor.sonoff_rf_bridge
+          show_header_toggle: false
+          title: Gateway's
+          type: entities
+        - entities:
+            - entity: binary_sensor.camera_digoo
+              icon: 'mdi:webcam'
+              name: Câmera Interna 360
+            - entity: binary_sensor.wcam360
+              name: Câmera Garagem 360
+            - entity: binary_sensor.xiaofang
+              icon: 'mdi:webcam'
+              name: Câmera Xiaofang
+            - entity: binary_sensor.v380_piscina
+              icon: 'mdi:video'
+              name: Câmera 360 Piscina
+            - entity: binary_sensor.v380_interna
+              icon: 'mdi:video'
+              name: Câmera 360 Interna 2
+          show_header_toggle: false
+          title: Câmeras
+          type: entities
+        - entities:
+            - entity: binary_sensor.tv_lg_game
+              name: TV LG55 - Salva Social
+            - entity: binary_sensor.chrome_cast_quarto
+            - entity: binary_sensor.chrome_cast_game
+            - entity: binary_sensor.google_home_quarto
+            - entity: binary_sensor.google_home_sala
+          show_header_toggle: false
+          title: Tv / Casts / G Home
+          type: entities
+        - entities:
+            - entity: sensor.last_boot
+              name: Última inicialização
+            - entity: sensor.uptime
+          type: entities
+      icon: 'mdi:raspberry-pi'
+      panel: false
+      path: dispositivos
+      title: Dispositivos

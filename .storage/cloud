@@ -1,0 +1,36 @@
+{
+    "data": {
+        "alexa_enabled": false,
+        "alexa_entity_configs": {},
+        "cloud_user": "c2a5e4b1910a47079fd9abb1b44891b4",
+        "cloudhooks": {
+            "12b0f7d2abccb2797bb74a1161c434b34a9adac57c5f9a764f0b13c3eaee327f": {
+                "cloudhook_id": "7310253772af427bacc154390887147b",
+                "cloudhook_url": "https://hooks.nabu.casa/gAAAAABd6WHhnHqBAXPl0byGF1HnjCHCadiy53rbqx3UjLhhAidcBnUqBBYchDCLjWwBt-6ygeH2l7hvNfPAoJW6P7up4nDkDnKQc26zpyrUc7MUXanZCvUKIPMn0I-7r6jVV5yZdMCHv4ZKX_OTBTdchB8pSOoVojydEt8kSQVGXbiAFTjDOu0=",
+                "managed": true,
+                "webhook_id": "12b0f7d2abccb2797bb74a1161c434b34a9adac57c5f9a764f0b13c3eaee327f"
+            },
+            "97685d845414676b206ec296df81a043d4f055ef164459d04cb3569fbba54ed8": {
+                "cloudhook_id": "7c1ddd5b303f459b9d1698298ea55e72",
+                "cloudhook_url": "https://hooks.nabu.casa/gAAAAABd6Q1WHehwh03tulwvzpRDcT8qxX8r4ER7VpCY2TEc26sMu8cvu0Gg83BLt0r8QFT6uWxKUfuDRMf5WpWqc3qsC6RU9vzLzpN9pqh2nHjzr--AEV0EdkPP_G81znN9MqB0ukixOCW67bD7wNjyzkbvxNY4Dwp2gDKNuPxdtC2kVdWFZdc=",
+                "managed": true,
+                "webhook_id": "97685d845414676b206ec296df81a043d4f055ef164459d04cb3569fbba54ed8"
+            },
+            "faf4367d0dade8ee42f15e14fea1a4d4f2e2dc317324fc4eacb23ad3a76a4572": {
+                "cloudhook_id": "7f20bfa404cd427fa55423677aa8530d",
+                "cloudhook_url": "https://hooks.nabu.casa/gAAAAABeDx9zysxiWAKNBR-qoZAVYLIYlyya63kPwAg4_SKjeDQFBkekIAX9m_Kna3F70ktNTh-bvU6yKflav1ZGWQEdtkV1OtbYnG_6Yg2_JuDjZkmkJ9OZYKcyr83GX4ZzpaG6fZM2T8H2e-jRYzok20gDLnrCpNwCQ2Q83feIDWV67b6hUaU=",
+                "managed": true,
+                "webhook_id": "faf4367d0dade8ee42f15e14fea1a4d4f2e2dc317324fc4eacb23ad3a76a4572"
+            }
+        },
+        "google_enabled": true,
+        "google_entity_configs": {},
+        "google_local_webhook_id": "1e3b808dfd47ac9f5ad9fa548d43f2bbe6db44ceb360516e08ab6599cd868d23",
+        "google_report_state": true,
+        "google_secure_devices_pin": null,
+        "remote_enabled": false,
+        "username": "3b0bb93c-cf82-4dc2-a895-489137ba7055"
+    },
+    "key": "cloud",
+    "version": 1
+}

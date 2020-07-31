@@ -1,0 +1,10 @@
+{
+    "data": {
+        "hacs/integration": {
+            "version_type": "version",
+            "version_installed": "0.17.3",
+            "version_available": "0.17.3"
+        }
+    },
+    "schema": "5"
+}

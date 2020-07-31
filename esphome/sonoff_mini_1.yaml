@@ -1,0 +1,41 @@
+esphome:
+  name: sonoff_mini_1
+  platform: ESP8266
+  board: esp01_1m
+
+wifi:
+  ssid: "Wi-Fi Gratis"
+  password: "naotemsenha"
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+binary_sensor:
+  - platform: gpio
+    id: button
+    pin:
+      number: GPIO0
+      mode: INPUT_PULLUP
+      inverted: True
+    name: "Interruptor Escritório"
+    on_press:
+      - light.toggle: light01
+
+output:
+  - platform: gpio
+    pin: GPIO12
+    id: relay
+
+light:
+  - platform: binary
+    name: "Luz Escritório"
+    id: light01
+    output: relay
+
+web_server:
+  port: 80

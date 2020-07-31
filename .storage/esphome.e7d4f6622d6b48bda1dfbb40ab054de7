@@ -1,0 +1,31 @@
+{
+    "data": {
+        "device_info": {
+            "compilation_time": "Oct 30 2019, 20:08:57",
+            "esphome_version": "1.13.6",
+            "has_deep_sleep": false,
+            "mac_address": "2C:F4:32:A9:B8:9C",
+            "model": "PLATFORMIO_ESP01_1M",
+            "name": "sonoff_mini_luz_escada",
+            "uses_password": false
+        },
+        "light": [
+            {
+                "effects": [],
+                "key": 519009720,
+                "max_mireds": 0.0,
+                "min_mireds": 0.0,
+                "name": "Luz Escada",
+                "object_id": "luz_escada",
+                "supports_brightness": false,
+                "supports_color_temperature": false,
+                "supports_rgb": false,
+                "supports_white_value": false,
+                "unique_id": "sonoff_mini_luz_escadalightluz_escada"
+            }
+        ],
+        "services": []
+    },
+    "key": "esphome.e7d4f6622d6b48bda1dfbb40ab054de7",
+    "version": 1
+}

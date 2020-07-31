@@ -1,0 +1,16 @@
+esphome:
+  name: sonoff_powr2_cozinha
+  platform: ESP8266
+  board: esp01_1m
+
+wifi:
+  ssid: "Wi-Fi Gratis"
+  password: "smartcasa"
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:

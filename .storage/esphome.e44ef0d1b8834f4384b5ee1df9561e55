@@ -1,0 +1,41 @@
+{
+    "data": {
+        "binary_sensor": [
+            {
+                "device_class": "",
+                "is_status_binary_sensor": false,
+                "key": 3578638730,
+                "name": "Interruptor Escrit\u00f3rio",
+                "object_id": "interruptor_escritrio",
+                "unique_id": "sonoff_mini_luz_escritoriobinary_sensorinterruptor_escritrio"
+            }
+        ],
+        "device_info": {
+            "compilation_time": "Oct 30 2019, 18:52:46",
+            "esphome_version": "1.13.6",
+            "has_deep_sleep": false,
+            "mac_address": "2C:F4:32:AA:3A:25",
+            "model": "PLATFORMIO_ESP01_1M",
+            "name": "sonoff_mini_luz_escritorio",
+            "uses_password": false
+        },
+        "light": [
+            {
+                "effects": [],
+                "key": 2414697053,
+                "max_mireds": 0.0,
+                "min_mireds": 0.0,
+                "name": "Luz do Escrit\u00f3rio",
+                "object_id": "luz_do_escritrio",
+                "supports_brightness": false,
+                "supports_color_temperature": false,
+                "supports_rgb": false,
+                "supports_white_value": false,
+                "unique_id": "sonoff_mini_luz_escritoriolightluz_do_escritrio"
+            }
+        ],
+        "services": []
+    },
+    "key": "esphome.e44ef0d1b8834f4384b5ee1df9561e55",
+    "version": 1
+}

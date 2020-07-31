@@ -1,0 +1,29 @@
+  - name: "Home"
+    latitude: !secret lat
+    longitude: !secret long
+    radius: 20
+    icon: mdi:home-heart
+
+  - name: "Condominio"
+    latitude: !secret lat_cond
+    longitude: !secret long_cond
+    radius: 100
+    icon: mdi:home-group
+
+  - name: "EmporioBus"
+    latitude: !secret lat_embus
+    longitude: !secret long_embus
+    radius: 20
+    icon: mdi:store
+
+  - name: "Sebastiana"
+    latitude: !secret lat_tiana
+    longitude: !secret long_tiana
+    radius: 20
+    icon: mdi:home-outline
+
+  - name: "CMDPII"
+    latitude: !secret lat_cmdpii
+    longitude: !secret long_cmdpii
+    radius: 30
+    icon: mdi:school

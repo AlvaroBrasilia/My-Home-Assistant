@@ -1,0 +1,41 @@
+{
+    "data": {
+        "binary_sensor": [
+            {
+                "device_class": "",
+                "is_status_binary_sensor": false,
+                "key": 3339393604,
+                "name": "Interruptor Cozinha",
+                "object_id": "interruptor_cozinha",
+                "unique_id": "sonoff_mini_luz_cozinhabinary_sensorinterruptor_cozinha"
+            }
+        ],
+        "device_info": {
+            "compilation_time": "Jul 29 2020, 12:58:07",
+            "esphome_version": "1.14.5",
+            "has_deep_sleep": false,
+            "mac_address": "D8:F1:5B:C7:2A:72",
+            "model": "PLATFORMIO_ESP01_1M",
+            "name": "sonoff_mini_luz_cozinha",
+            "uses_password": false
+        },
+        "light": [
+            {
+                "effects": [],
+                "key": 3912195151,
+                "max_mireds": 0.0,
+                "min_mireds": 0.0,
+                "name": "Luz Cozinha",
+                "object_id": "luz_cozinha",
+                "supports_brightness": false,
+                "supports_color_temperature": false,
+                "supports_rgb": false,
+                "supports_white_value": false,
+                "unique_id": "sonoff_mini_luz_cozinhalightluz_cozinha"
+            }
+        ],
+        "services": []
+    },
+    "key": "esphome.33ae4dbbf3a44c30ae6259387e1de5f8",
+    "version": 1
+}

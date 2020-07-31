@@ -1,0 +1,296 @@
+{
+    "data": {
+        "entries": [
+            {
+                "connection_class": "cloud_poll",
+                "data": {
+                    "track_home": true
+                },
+                "domain": "met",
+                "entry_id": "4191b98dde7b48deb098f028db0245da",
+                "options": {},
+                "source": "onboarding",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "Home",
+                "unique_id": null,
+                "version": 1
+            },
+            {
+                "connection_class": "local_push",
+                "data": {
+                    "broker": "core-mosquitto",
+                    "discovery": true,
+                    "password": "veihahh0kuyienga6caiy1ol1Bour3Gohnai7ooquahgh6eeheenojuyoox4jahh",
+                    "port": 1883,
+                    "protocol": "3.1.1",
+                    "username": "homeassistant"
+                },
+                "domain": "mqtt",
+                "entry_id": "d3fa53ea5b5047eebab47ce781a898d0",
+                "options": {},
+                "source": "hassio",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "Mosquitto broker",
+                "unique_id": null,
+                "version": 1
+            },
+            {
+                "connection_class": "cloud_poll",
+                "data": {
+                    "appdaemon": false,
+                    "python_script": false,
+                    "sidepanel_icon": "mdi:alpha-c-box",
+                    "sidepanel_title": "Community",
+                    "theme": false,
+                    "token": "fd8e065599054130715d5263755a51a9ecdc600d"
+                },
+                "domain": "hacs",
+                "entry_id": "2c4d6e8e42ae41bf8b8396bc853bfb17",
+                "options": {},
+                "source": "user",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "",
+                "unique_id": null,
+                "version": 1
+            },
+            {
+                "connection_class": "local_push",
+                "data": {
+                    "host": "192.168.0.5",
+                    "password": "",
+                    "port": 6053
+                },
+                "domain": "esphome",
+                "entry_id": "97580322c6de4bdbb867ee315b6ceee5",
+                "options": {},
+                "source": "zeroconf",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "interruptor_sonoff_sala",
+                "unique_id": "interruptor_sonoff_sala",
+                "version": 1
+            },
+            {
+                "connection_class": "local_push",
+                "data": {
+                    "host": "192.168.0.25",
+                    "password": "",
+                    "port": 6053
+                },
+                "domain": "esphome",
+                "entry_id": "33ae4dbbf3a44c30ae6259387e1de5f8",
+                "options": {},
+                "source": "zeroconf",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "sonoff_mini_luz_cozinha",
+                "unique_id": "sonoff_mini_luz_cozinha",
+                "version": 1
+            },
+            {
+                "connection_class": "local_push",
+                "data": {
+                    "host": "192.168.0.4",
+                    "password": "",
+                    "port": 6053
+                },
+                "domain": "esphome",
+                "entry_id": "feed6a68b65343b3aaf5e782a10e1c31",
+                "options": {},
+                "source": "zeroconf",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "sonoff_mini_luz_escritorio",
+                "unique_id": "sonoff_mini_luz_escritorio",
+                "version": 1
+            },
+            {
+                "connection_class": "local_push",
+                "data": {
+                    "host": "sonoff_mini_luz_escada.local",
+                    "password": "",
+                    "port": 6053
+                },
+                "domain": "esphome",
+                "entry_id": "456fddacd5204839ae7b81798cddb395",
+                "options": {},
+                "source": "zeroconf",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "sonoff_mini_luz_escada",
+                "unique_id": null,
+                "version": 1
+            },
+            {
+                "connection_class": "cloud_push",
+                "data": {
+                    "app_data": {
+                        "push_token": "dV1-7rGVvio:APA91bHNfCTNpB2SzAG0CIlabgEoC1YGQPDFE-0ml5LQNrU5FM6bAFvYgVpv2x0eUDFeB1VDm44c2kfX0sDQvxyqOOs0C1GYP5KQdZjTsKHh2FNC8dZjlzU2tM8Un3Jitqj0EH2WLpKu",
+                        "push_url": "https://mobile-apps.home-assistant.io/api/sendPushNotification"
+                    },
+                    "app_id": "io.homeassistant.companion.android",
+                    "app_name": "Home Assistant",
+                    "app_version": "1.2.0 (42)",
+                    "cloudhook_url": "https://hooks.nabu.casa/gAAAAABd6Q1WHehwh03tulwvzpRDcT8qxX8r4ER7VpCY2TEc26sMu8cvu0Gg83BLt0r8QFT6uWxKUfuDRMf5WpWqc3qsC6RU9vzLzpN9pqh2nHjzr--AEV0EdkPP_G81znN9MqB0ukixOCW67bD7wNjyzkbvxNY4Dwp2gDKNuPxdtC2kVdWFZdc=",
+                    "device_id": "6a4ac9e7b8f34936ad78f11899f38992",
+                    "device_name": "M20_4G",
+                    "manufacturer": "techain",
+                    "model": "M20_4G",
+                    "os_name": "Android",
+                    "os_version": "26",
+                    "supports_encryption": false,
+                    "user_id": "7e959263cfc94b2580697900cf76605b",
+                    "webhook_id": "97685d845414676b206ec296df81a043d4f055ef164459d04cb3569fbba54ed8"
+                },
+                "domain": "mobile_app",
+                "entry_id": "bffa601d9b934467bb30368a4ccc2f42",
+                "options": {},
+                "source": "registration",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "M20_4G",
+                "unique_id": null,
+                "version": 1
+            },
+            {
+                "connection_class": "cloud_push",
+                "data": {
+                    "app_data": {},
+                    "app_id": "io.homeassistant.companion.android",
+                    "app_name": "Home Assistant",
+                    "app_version": "1.1.1 (32)",
+                    "cloudhook_url": "https://hooks.nabu.casa/gAAAAABd6WHhnHqBAXPl0byGF1HnjCHCadiy53rbqx3UjLhhAidcBnUqBBYchDCLjWwBt-6ygeH2l7hvNfPAoJW6P7up4nDkDnKQc26zpyrUc7MUXanZCvUKIPMn0I-7r6jVV5yZdMCHv4ZKX_OTBTdchB8pSOoVojydEt8kSQVGXbiAFTjDOu0=",
+                    "device_id": "5d109820f12e4f1b93f9c8916bf08cc8",
+                    "device_name": "Mi A2 Lite",
+                    "manufacturer": "Xiaomi",
+                    "model": "Mi A2 Lite",
+                    "os_name": "Android",
+                    "os_version": "28",
+                    "supports_encryption": false,
+                    "user_id": "c71e494186834947be7f7bb8ad491194",
+                    "webhook_id": "12b0f7d2abccb2797bb74a1161c434b34a9adac57c5f9a764f0b13c3eaee327f"
+                },
+                "domain": "mobile_app",
+                "entry_id": "4615abb7f1eb4af4b900ee74543d952d",
+                "options": {},
+                "source": "registration",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "Mi A2 Lite",
+                "unique_id": null,
+                "version": 1
+            },
+            {
+                "connection_class": "cloud_push",
+                "data": {
+                    "app_data": {
+                        "push_token": "cmmfZfMQA9U:APA91bFKu-Sjkh4Askc4PXv8icetX82lr3tGpAnWEUm4KkLn2vsYr1-ovdl5-CCGPJmkhBFeqe3s936jsXE2KHMYP0LFG4Fi29sfoiRGRuNUVcuarxL0e10CtJzDuZHkW7pnu3-UW-W7",
+                        "push_url": "https://mobile-apps.home-assistant.io/api/sendPush/android/v1"
+                    },
+                    "app_id": "io.homeassistant.companion.android",
+                    "app_name": "Home Assistant",
+                    "app_version": "1.9.0-167 (167)",
+                    "cloudhook_url": "https://hooks.nabu.casa/gAAAAABeDx9zysxiWAKNBR-qoZAVYLIYlyya63kPwAg4_SKjeDQFBkekIAX9m_Kna3F70ktNTh-bvU6yKflav1ZGWQEdtkV1OtbYnG_6Yg2_JuDjZkmkJ9OZYKcyr83GX4ZzpaG6fZM2T8H2e-jRYzok20gDLnrCpNwCQ2Q83feIDWV67b6hUaU=",
+                    "device_id": "a2dbe1bff1544cc4b45ddc81f921c7d3",
+                    "device_name": "MI9",
+                    "manufacturer": "Xiaomi",
+                    "model": "MI 9",
+                    "os_name": "Android",
+                    "os_version": "29",
+                    "supports_encryption": false,
+                    "user_id": "7e959263cfc94b2580697900cf76605b",
+                    "webhook_id": "faf4367d0dade8ee42f15e14fea1a4d4f2e2dc317324fc4eacb23ad3a76a4572"
+                },
+                "domain": "mobile_app",
+                "entry_id": "cc92179db600419f918208d18cd3a2d1",
+                "options": {},
+                "source": "registration",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "M20_4G",
+                "unique_id": null,
+                "version": 1
+            },
+            {
+                "connection_class": "local_poll",
+                "data": {},
+                "domain": "speedtestdotnet",
+                "entry_id": "43b5929fd2c6490c99c2cc8b7ed0efd9",
+                "options": {
+                    "manual": false,
+                    "scan_interval": 60,
+                    "server_id": ""
+                },
+                "source": "import",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "SpeedTest",
+                "unique_id": null,
+                "version": 1
+            },
+            {
+                "connection_class": "local_push",
+                "data": {
+                    "user_id": "11a44403fa7b4845b27df0e14428ec0f"
+                },
+                "domain": "cast",
+                "entry_id": "26d1029478f247959e52666343b65c40",
+                "options": {},
+                "source": "zeroconf",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "Google Cast",
+                "unique_id": "cast",
+                "version": 1
+            },
+            {
+                "connection_class": "cloud_push",
+                "data": {
+                    "app_data": {
+                        "push_token": "cmmfZfMQA9U:APA91bFKu-Sjkh4Askc4PXv8icetX82lr3tGpAnWEUm4KkLn2vsYr1-ovdl5-CCGPJmkhBFeqe3s936jsXE2KHMYP0LFG4Fi29sfoiRGRuNUVcuarxL0e10CtJzDuZHkW7pnu3-UW-W7",
+                        "push_url": "https://mobile-apps.home-assistant.io/api/sendPush/android/v1"
+                    },
+                    "app_id": "io.homeassistant.companion.android",
+                    "app_name": "Home Assistant",
+                    "app_version": "1.11.2-221 (221)",
+                    "device_id": "67168a8cc0884cf8",
+                    "device_name": "MI 9",
+                    "manufacturer": "Xiaomi",
+                    "model": "MI 9",
+                    "os_name": "Android",
+                    "os_version": "29",
+                    "supports_encryption": false,
+                    "user_id": "7e959263cfc94b2580697900cf76605b",
+                    "webhook_id": "b8b4db390b9c7c310470b3edbf194b3f374096b42f4f998a55147dfbe1c21043"
+                },
+                "domain": "mobile_app",
+                "entry_id": "d4e411831e25454784390ad9d277c1b8",
+                "options": {},
+                "source": "registration",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "MI 9",
+                "unique_id": "io.homeassistant.companion.android-67168a8cc0884cf8",
+                "version": 1
+            }
+        ]
+    },
+    "key": "core.config_entries",
+    "version": 1
+}

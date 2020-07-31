@@ -1,0 +1,512 @@
+{
+    "data": {
+        "config": {
+            "cch": {
+                "menu": "overflow",
+                "options": "clock"
+            },
+            "custom_header": {
+                "button_text": {
+                    "options": "<br>"
+                },
+                "compact_mode": true
+            },
+            "title": "Casa",
+            "views": [
+                {
+                    "badges": [
+                        {
+                            "entity": "person.joao_guilherme"
+                        },
+                        {
+                            "entity": "person.alvaro_luiz"
+                        }
+                    ],
+                    "cards": [
+                        {
+                            "entity": "weather.casa",
+                            "type": "weather-forecast"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.luz_sala_de_jantar"
+                                },
+                                {
+                                    "entity": "light.luz_sala_de_tv"
+                                },
+                                {
+                                    "entity": "light.luz_garagem"
+                                }
+                            ],
+                            "show_header_toggle": true,
+                            "theme": "Transparent",
+                            "title": "Ilumina\u00e7\u00e3o da Sala",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.dht_sensor_temperature",
+                                    "name": "Temperatura"
+                                },
+                                {
+                                    "entity": "sensor.dht_sensor_humidity",
+                                    "name": "Humidade do ar"
+                                }
+                            ],
+                            "show_name": true,
+                            "show_state": true,
+                            "theme": "default",
+                            "title": "Clima Interno",
+                            "type": "glance"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.luz_cozinha"
+                                }
+                            ],
+                            "theme": "Transparent",
+                            "title": "Cozinha",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "label": "Valor m\u00e9dio do kW/h da \u00faltima fatura",
+                                    "type": "section"
+                                },
+                                {
+                                    "entity": "input_text.box1",
+                                    "icon": "mdi:square-inc-cash"
+                                },
+                                {
+                                    "entity": "sensor.voltagem"
+                                },
+                                {
+                                    "entity": "sensor.voltagem_cozinha"
+                                },
+                                {
+                                    "entity": "sensor.watts"
+                                },
+                                {
+                                    "entity": "sensor.corrente"
+                                },
+                                {
+                                    "entity": "sensor.consumo_diario"
+                                },
+                                {
+                                    "entity": "sensor.consumo_dia_anterior"
+                                },
+                                {
+                                    "entity": "sensor.consumo_total"
+                                },
+                                {
+                                    "entity": "sensor.energy_brl_hoje"
+                                },
+                                {
+                                    "entity": "sensor.energy_brl_ontem"
+                                },
+                                {
+                                    "entity": "sensor.energy_brl_total"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Consumo de Energia",
+                            "type": "entities"
+                        },
+                        {
+                            "aspect_ratio": "0%",
+                            "camera_image": "camera.camera_1",
+                            "entities": [
+                                {
+                                    "entity": "camera.camera_1"
+                                }
+                            ],
+                            "entity": "camera.camera_1",
+                            "hold_action": {
+                                "action": "call-service",
+                                "service": "camera.play_stream"
+                            },
+                            "image": "https://www.home-assistant.io/images/merchandise/shirt-frontpage.png",
+                            "tap_action": {
+                                "action": "call-service",
+                                "service": "camera.snapshot"
+                            },
+                            "title": "Camera",
+                            "type": "picture-glance"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.lock_battery_2"
+                                },
+                                {
+                                    "entity": "sensor.lock_battery"
+                                }
+                            ],
+                            "type": "glance"
+                        }
+                    ],
+                    "icon": "mdi:home",
+                    "path": "default_view",
+                    "theme": "Transparent",
+                    "title": "Home"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.voltagem"
+                                },
+                                {
+                                    "entity": "sensor.watts"
+                                },
+                                {
+                                    "entity": "sensor.corrente"
+                                },
+                                {
+                                    "entity": "sensor.consumo_diario"
+                                },
+                                {
+                                    "entity": "sensor.consumo_dia_anterior"
+                                },
+                                {
+                                    "entity": "sensor.consumo_total"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "theme": "Transparent",
+                            "title": "Consumo de Energia",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:power-plug",
+                    "path": "monitor-de-consumo-de-energia",
+                    "title": "Energia"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "custom_fields": {
+                                "icone": "[[[\n  return `<b>HassOS</b><br><ha-icon\n    icon=\"mdi:raspberry-pi\"\n    style=\"width: 40px; height: 40px;\">\n    </ha-icon><br></span>\n    <ha-icon\n    icon=\"mdi:radioactive\"\n    style=\"width: 18px; height: 16px; color: red;\">\n    </ha-icon><span> <span style=\"color: var(--text-color-sensor);\">${states['sensor.processor_use'].state}%</span></span>`\n]]]\n",
+                                "ram": "[[[\n  return `<ha-icon\n    icon=\"mdi:memory\"\n    style=\"width: 22px; height: 18px; color: #C51162;\">\n    </ha-icon><span>RAM: <span style=\"color: var(--text-color-sensor);\"><b>${states['sensor.memory_free'].state}</b> MB</span></span>`\n]]]\n",
+                                "ramuse": "[[[\n  return `<ha-icon\n    icon=\"mdi:memory\"\n    style=\"width: 22px; height: 18px; color: #C51162;\">\n    </ha-icon><span><span style=\"color: var(--text-color-sensor);\"><b>${states['sensor.memory_use_percent'].state}</b>%</span></span>`\n]]]\n",
+                                "sd": "[[[\n  return `<ha-icon\n    icon=\"mdi:harddisk\"\n    style=\"width: 22px; height: 18px; color: #8BC34A;\">\n    </ha-icon><span>SD: <span style=\"color: var(--text-color-sensor);\"><b>${states['sensor.disk_free'].state}</b> GB</span></span>`\n]]]\n",
+                                "sduse": "[[[\n  return `<ha-icon\n    icon=\"mdi:harddisk\"\n    style=\"width: 22px; height: 18px; color: #8BC34A;\">\n    </ha-icon><span><span style=\"color: var(--text-color-sensor);\"><b>${states['sensor.disk_use_percent'].state}</b>%</span></span>`\n]]]\n",
+                                "temp": "[[[\n  return `<ha-icon\n    icon=\"mdi:thermometer\"\n    style=\"width: 22px; height: 18px; color: yellow;\">\n    </ha-icon><span><b>${entity.state}</b>\u00b0C</span>`\n]]]\n",
+                                "versao": "[[[\n  return `<ha-icon\n    icon=\"mdi:settings\"\n    style=\"width: 22px; height: 18px; color: deepskyblue;\">\n    </ha-icon><span>Vers\u00e3o: <span style=\"color: var(--text-color-sensor);\"><b>${states['sensor.versao'].state}</b></span></span>`\n]]]\n"
+                            },
+                            "entity": "sensor.cpu_temperatura",
+                            "layout": "icon_state_name2nd",
+                            "show_icon": false,
+                            "show_name": false,
+                            "show_state": false,
+                            "styles": {
+                                "card": [
+                                    {
+                                        "padding": "10%"
+                                    },
+                                    {
+                                        "font-size": "15px"
+                                    }
+                                ],
+                                "custom_fields": {
+                                    "icone": [
+                                        {
+                                            "position": "absolute"
+                                        },
+                                        {
+                                            "left": "77%"
+                                        },
+                                        {
+                                            "top": "5%"
+                                        }
+                                    ],
+                                    "ram": [
+                                        {
+                                            "position": "absolute"
+                                        },
+                                        {
+                                            "left": "2%"
+                                        },
+                                        {
+                                            "top": "70%"
+                                        }
+                                    ],
+                                    "ramuse": [
+                                        {
+                                            "position": "absolute"
+                                        },
+                                        {
+                                            "left": "35%"
+                                        },
+                                        {
+                                            "top": "70%"
+                                        }
+                                    ],
+                                    "sd": [
+                                        {
+                                            "position": "absolute"
+                                        },
+                                        {
+                                            "left": "2%"
+                                        },
+                                        {
+                                            "top": "40%"
+                                        }
+                                    ],
+                                    "sduse": [
+                                        {
+                                            "position": "absolute"
+                                        },
+                                        {
+                                            "left": "35%"
+                                        },
+                                        {
+                                            "top": "40%"
+                                        }
+                                    ],
+                                    "temp": [
+                                        {
+                                            "position": "absolute"
+                                        },
+                                        {
+                                            "left": "35%"
+                                        },
+                                        {
+                                            "top": "10%"
+                                        }
+                                    ],
+                                    "versao": [
+                                        {
+                                            "position": "absolute"
+                                        },
+                                        {
+                                            "left": "2%"
+                                        },
+                                        {
+                                            "top": "10%"
+                                        }
+                                    ]
+                                }
+                            },
+                            "type": "custom:button-card"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "cards": [
+                                        {
+                                            "color_thresholds": [
+                                                {
+                                                    "color": "#E65100",
+                                                    "value": 50
+                                                },
+                                                {
+                                                    "color": "#66BB6A",
+                                                    "value": 45
+                                                },
+                                                {
+                                                    "color": "#03A9F4",
+                                                    "value": 40
+                                                }
+                                            ],
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.cpu_temperatura",
+                                                    "index": 0
+                                                }
+                                            ],
+                                            "hours_to_show": 24,
+                                            "line_width": 4,
+                                            "name": "Temperatura 24h",
+                                            "points_per_hour": 4,
+                                            "show": {
+                                                "extrema": true,
+                                                "fill": false
+                                            },
+                                            "type": "custom:mini-graph-card"
+                                        },
+                                        {
+                                            "color_thresholds": [
+                                                {
+                                                    "color": "#E65100",
+                                                    "value": 60
+                                                },
+                                                {
+                                                    "color": "#66BB6A",
+                                                    "value": 10
+                                                },
+                                                {
+                                                    "color": "#03A9F4",
+                                                    "value": 5
+                                                }
+                                            ],
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.processor_use",
+                                                    "index": 0
+                                                }
+                                            ],
+                                            "hours_to_show": 2,
+                                            "line_width": 4,
+                                            "name": "CPU - 2h",
+                                            "points_per_hour": 30,
+                                            "show": {
+                                                "extrema": true,
+                                                "fill": false
+                                            },
+                                            "type": "custom:mini-graph-card"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
+                                },
+                                {
+                                    "cards": [
+                                        {
+                                            "entity": "sensor.disk_use_percent",
+                                            "name": "SSD",
+                                            "type": "gauge"
+                                        },
+                                        {
+                                            "entity": "sensor.memory_use_percent",
+                                            "name": "RAM",
+                                            "type": "gauge"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.last_boot",
+                                    "name": "\u00daltima inicializa\u00e7\u00e3o"
+                                },
+                                {
+                                    "entity": "sensor.uptime"
+                                }
+                            ],
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.internet",
+                                    "name": "NET/CLARO"
+                                },
+                                {
+                                    "entity": "binary_sensor.cftv",
+                                    "icon": "mdi:desktop-classic",
+                                    "name": "EMPORIOBUS"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Diversos",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [],
+                            "show_header_toggle": false,
+                            "title": "Gateway's",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "camera.camera_1",
+                                    "icon": "mdi:webcam",
+                                    "name": "C\u00e2mera Interna 360"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "C\u00e2meras",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [],
+                            "show_header_toggle": false,
+                            "title": "Tv / Casts / G Home",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:raspberry-pi",
+                    "panel": false,
+                    "path": "dispositivos",
+                    "theme": "Transparent",
+                    "title": "Dispositivos"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.lock_battery"
+                                },
+                                {
+                                    "entity": "binary_sensor.lock_open_state"
+                                },
+                                {
+                                    "entity": "sensor.get_lock_open_state"
+                                },
+                                {
+                                    "entity": "sensor.lock_open_state"
+                                }
+                            ],
+                            "type": "glance"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.lock_battery"
+                                },
+                                {
+                                    "entity": "binary_sensor.lock_open_state"
+                                },
+                                {
+                                    "entity": "sensor.get_lock_open_state"
+                                },
+                                {
+                                    "entity": "sensor.lock_open_state"
+                                },
+                                {
+                                    "entity": "switch.lock_door_curl"
+                                },
+                                {
+                                    "entity": "switch.lock_door"
+                                }
+                            ],
+                            "type": "entities"
+                        },
+                        {
+                            "entity": "switch.lock_door_curl",
+                            "hold_action": {
+                                "action": "none"
+                            },
+                            "icon": "mdi:door-closed-lock",
+                            "show_icon": true,
+                            "show_name": true,
+                            "tap_action": {
+                                "action": "call-service",
+                                "service": "switch.toggle"
+                            },
+                            "type": "entity-button"
+                        }
+                    ],
+                    "icon": "mdi:door-closed-lock",
+                    "theme": "Transparent"
+                }
+            ]
+        }
+    },
+    "key": "lovelace",
+    "version": 1
+}

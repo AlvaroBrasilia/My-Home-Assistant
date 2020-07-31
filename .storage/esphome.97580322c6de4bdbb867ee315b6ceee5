@@ -1,0 +1,57 @@
+{
+    "data": {
+        "device_info": {
+            "compilation_time": "Jul 29 2020, 12:53:02",
+            "esphome_version": "1.14.5",
+            "has_deep_sleep": false,
+            "mac_address": "84:0D:8E:77:85:49",
+            "model": "PLATFORMIO_ESP01_1M",
+            "name": "interruptor_sonoff_sala",
+            "uses_password": false
+        },
+        "light": [
+            {
+                "effects": [],
+                "key": 3936890753,
+                "max_mireds": 0.0,
+                "min_mireds": 0.0,
+                "name": "Luz Sala de Jantar",
+                "object_id": "luz_sala_de_jantar",
+                "supports_brightness": false,
+                "supports_color_temperature": false,
+                "supports_rgb": false,
+                "supports_white_value": false,
+                "unique_id": "interruptor_sonoff_salalightluz_sala_de_jantar"
+            },
+            {
+                "effects": [],
+                "key": 1109048687,
+                "max_mireds": 0.0,
+                "min_mireds": 0.0,
+                "name": "Luz Sala de TV",
+                "object_id": "luz_sala_de_tv",
+                "supports_brightness": false,
+                "supports_color_temperature": false,
+                "supports_rgb": false,
+                "supports_white_value": false,
+                "unique_id": "interruptor_sonoff_salalightluz_sala_de_tv"
+            },
+            {
+                "effects": [],
+                "key": 2543252567,
+                "max_mireds": 0.0,
+                "min_mireds": 0.0,
+                "name": "Luz Garagem",
+                "object_id": "luz_garagem",
+                "supports_brightness": false,
+                "supports_color_temperature": false,
+                "supports_rgb": false,
+                "supports_white_value": false,
+                "unique_id": "interruptor_sonoff_salalightluz_garagem"
+            }
+        ],
+        "services": []
+    },
+    "key": "esphome.97580322c6de4bdbb867ee315b6ceee5",
+    "version": 1
+}

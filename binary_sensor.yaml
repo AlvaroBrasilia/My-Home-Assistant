@@ -1,0 +1,17 @@
+# PINGs
+  - platform: ping
+    name: Internet  
+    host: 192.168.0.1
+  - platform: ping
+    name: CFTV  
+    host: 192.168.0.100
+  
+  - platform: command_line
+    command: !secret lock_state
+    name: 'Lock Open State'
+    device_class: lock
+    payload_on: 1
+    payload_off: 0
+    value_template: '{{ value_json.state }}'
+    scan_interval: 5
+    

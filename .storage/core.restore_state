@@ -1,0 +1,267 @@
+{
+    "data": [
+        {
+            "last_seen": "2020-07-31T19:14:07.162138+00:00",
+            "state": {
+                "attributes": {
+                    "editable": true,
+                    "friendly_name": "Alvaro Luiz",
+                    "gps_accuracy": 14,
+                    "id": "49501d305ef6491aba7d4e1b1ee946b1",
+                    "latitude": -15.8879112,
+                    "longitude": -47.8116596,
+                    "source": "device_tracker.mi_9",
+                    "user_id": "7e959263cfc94b2580697900cf76605b"
+                },
+                "context": {
+                    "id": "39894781eb89431b812f78fd272bba15",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "person.alvaro_luiz",
+                "last_changed": "2020-07-29T20:43:50.275041+00:00",
+                "last_updated": "2020-07-31T19:06:40.245350+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2020-07-31T19:14:07.162138+00:00",
+            "state": {
+                "attributes": {
+                    "editable": true,
+                    "friendly_name": "Jo\u00e3o",
+                    "gps_accuracy": 14,
+                    "id": "aa2882702f07406e96022a0c24ca9d97",
+                    "latitude": -15.8879361,
+                    "longitude": -47.8116556,
+                    "source": "device_tracker.mi_a2_lite",
+                    "user_id": "c71e494186834947be7f7bb8ad491194"
+                },
+                "context": {
+                    "id": "aca323ac5bd24e6f814ffbb4d2b3cf88",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "person.joao_guilherme",
+                "last_changed": "2020-07-29T20:43:50.275359+00:00",
+                "last_updated": "2020-07-29T20:44:06.842864+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2020-07-31T19:14:07.162138+00:00",
+            "state": {
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "Valor kW/h",
+                    "max": 100,
+                    "min": 0,
+                    "mode": "text",
+                    "pattern": null
+                },
+                "context": {
+                    "id": "ab440c65c7f44dd88422984c51c63f28",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_text.box1",
+                "last_changed": "2020-07-29T20:43:55.471536+00:00",
+                "last_updated": "2020-07-29T20:43:55.471536+00:00",
+                "state": "0.800"
+            }
+        },
+        {
+            "last_seen": "2020-07-31T19:14:07.162138+00:00",
+            "state": {
+                "attributes": {
+                    "attribution": "Data retrieved from Speedtest.net by Ookla",
+                    "friendly_name": "SpeedTest Ping",
+                    "icon": "mdi:speedometer",
+                    "server_country": "Brazil",
+                    "server_id": "30446",
+                    "server_name": "Brasilia",
+                    "unit_of_measurement": "ms"
+                },
+                "context": {
+                    "id": "4111af9a4d10491d9a0b37d1f73252cd",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "sensor.speedtest_ping",
+                "last_changed": "2020-07-31T18:29:33.946685+00:00",
+                "last_updated": "2020-07-31T18:29:33.946685+00:00",
+                "state": "36.325"
+            }
+        },
+        {
+            "last_seen": "2020-07-31T19:14:07.162138+00:00",
+            "state": {
+                "attributes": {
+                    "attribution": "Data retrieved from Speedtest.net by Ookla",
+                    "bytes_received": 145159568,
+                    "friendly_name": "SpeedTest Download",
+                    "icon": "mdi:speedometer",
+                    "server_country": "Brazil",
+                    "server_id": "30446",
+                    "server_name": "Brasilia",
+                    "unit_of_measurement": "Mbit/s"
+                },
+                "context": {
+                    "id": "f570682cb2a64ce18bd094e8c989cde9",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "sensor.speedtest_download",
+                "last_changed": "2020-07-31T18:29:33.947172+00:00",
+                "last_updated": "2020-07-31T18:29:33.947172+00:00",
+                "state": "115.1"
+            }
+        },
+        {
+            "last_seen": "2020-07-31T19:14:07.162138+00:00",
+            "state": {
+                "attributes": {
+                    "attribution": "Data retrieved from Speedtest.net by Ookla",
+                    "bytes_sent": 2064384,
+                    "friendly_name": "SpeedTest Upload",
+                    "icon": "mdi:speedometer",
+                    "server_country": "Brazil",
+                    "server_id": "30446",
+                    "server_name": "Brasilia",
+                    "unit_of_measurement": "Mbit/s"
+                },
+                "context": {
+                    "id": "3b75998ce4364310b1368a0e2ba01798",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "sensor.speedtest_upload",
+                "last_changed": "2020-07-31T18:29:33.947556+00:00",
+                "last_updated": "2020-07-31T18:29:33.947556+00:00",
+                "state": "1.23"
+            }
+        },
+        {
+            "last_seen": "2020-07-31T19:14:07.162138+00:00",
+            "state": {
+                "attributes": {
+                    "altitude": 0,
+                    "battery_level": 16,
+                    "course": 0,
+                    "friendly_name": "Tablet",
+                    "gps_accuracy": 14,
+                    "latitude": -15.8879205,
+                    "longitude": -47.8116785,
+                    "source_type": "gps",
+                    "speed": 0,
+                    "vertical_accuracy": 0
+                },
+                "context": {
+                    "id": "ef7b7cee4b224b739a5c41c2a742c12d",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.m20_4g",
+                "last_changed": "2020-07-29T20:43:58.157087+00:00",
+                "last_updated": "2020-07-29T20:43:58.157087+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2020-07-31T19:14:07.162138+00:00",
+            "state": {
+                "attributes": {
+                    "altitude": 1113,
+                    "battery_level": 22,
+                    "course": 0,
+                    "friendly_name": "Jo\u00e3o Guilherme",
+                    "gps_accuracy": 14,
+                    "latitude": -15.8879361,
+                    "longitude": -47.8116556,
+                    "source_type": "gps",
+                    "speed": 0,
+                    "vertical_accuracy": 2
+                },
+                "context": {
+                    "id": "0b31621806c5441788a04b9b1afc49b5",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.mi_a2_lite",
+                "last_changed": "2020-07-29T20:43:58.159684+00:00",
+                "last_updated": "2020-07-29T20:43:58.159684+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2020-07-31T19:14:07.162138+00:00",
+            "state": {
+                "attributes": {
+                    "altitude": 1114.0,
+                    "course": 0,
+                    "friendly_name": "MI9",
+                    "gps_accuracy": 12,
+                    "latitude": -15.8878971,
+                    "longitude": -47.8116793,
+                    "source_type": "gps",
+                    "speed": 0,
+                    "vertical_accuracy": 2
+                },
+                "context": {
+                    "id": "ce2bf4d93cd14e2fbd64aefd9f72e4e8",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.m20_4g_2",
+                "last_changed": "2020-07-31T11:12:25.823531+00:00",
+                "last_updated": "2020-07-31T11:12:25.823531+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2020-07-31T19:14:07.162138+00:00",
+            "state": {
+                "attributes": {
+                    "altitude": 1114.0,
+                    "course": 0,
+                    "friendly_name": "MI 9",
+                    "gps_accuracy": 14,
+                    "latitude": -15.8879112,
+                    "longitude": -47.8116596,
+                    "source_type": "gps",
+                    "speed": 0,
+                    "vertical_accuracy": 2
+                },
+                "context": {
+                    "id": "db19c14c37094bd2bf7221d569360e4e",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.mi_9",
+                "last_changed": "2020-07-31T19:11:15.562541+00:00",
+                "last_updated": "2020-07-31T19:11:15.562541+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2020-07-29T18:50:11.588649+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Alvaro Luiz's MI 9",
+                    "source_type": "gps"
+                },
+                "context": {
+                    "id": "003546f1639e491f9a8a4714a1cb10ca",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.alvaro_luiz_s_mi_9",
+                "last_changed": "2020-07-29T18:04:19.452384+00:00",
+                "last_updated": "2020-07-29T18:04:19.452384+00:00",
+                "state": "unknown"
+            }
+        }
+    ],
+    "key": "core.restore_state",
+    "version": 1
+}

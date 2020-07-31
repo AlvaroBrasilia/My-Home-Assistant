@@ -1,0 +1,213 @@
+# Temperatura & Humidade
+#   _______                              _    _                 _     _           _      
+#  |__   __|                     ___    | |  | |               (_)   | |         | |     
+#     | | ___ _ __ ___  _ __    ( _ )   | |__| |_   _ _ __ ___  _  __| | __ _  __| | ___ 
+#     | |/ _ \ '_ ` _ \| '_ \   / _ \/\ |  __  | | | | '_ ` _ \| |/ _` |/ _` |/ _` |/ _ \
+#     | |  __/ | | | | | |_) | | (_>  < | |  | | |_| | | | | | | | (_| | (_| | (_| |  __/
+#     |_|\___|_| |_| |_| .__/   \___/\/ |_|  |_|\__,_|_| |_| |_|_|\__,_|\__,_|\__,_|\___|
+#                      | |                                                               
+#        
+  - platform: dht
+    sensor: DHT22
+    pin: 4
+    monitored_conditions:
+      - temperature
+      - humidity
+
+# Consumo de energia
+#   __  __             _ _     ______                      _          _____                _ 
+#  |  \/  |           (_) |   |  ____|                    (_)        / ____|              | |
+#  | \  / | ___  _ __  _| |_  | |__   _ __   ___ _ __ __ _ _  __ _  | |  __  ___ _ __ __ _| |
+#  | |\/| |/ _ \| '_ \| | __| |  __| | '_ \ / _ \ '__/ _` | |/ _` | | | |_ |/ _ \ '__/ _` | |
+#  | |  | | (_) | | | | | |_  | |____| | | |  __/ | | (_| | | (_| | | |__| |  __/ | | (_| | |
+#  |_|  |_|\___/|_| |_|_|\__| |______|_| |_|\___|_|  \__, |_|\__,_|  \_____|\___|_|  \__,_|_|
+#                                                     __/ |                                  
+#                                                    |___/                                      
+
+  - platform: mqtt
+    name: "Voltagem"
+    state_topic: "tele/sonoff-monitor_energia_geral/SENSOR"
+    value_template: "{{ value_json.ENERGY.Voltage }}"
+    unit_of_measurement: "V"
+    icon: mdi:flash
+
+  - platform: mqtt
+    name: "Voltagem Cozinha"
+    state_topic: "tele/sonoff-monitor_energia_cozinha/SENSOR"
+    value_template: "{{ value_json.ENERGY.Voltage }}"
+    unit_of_measurement: "V"
+    icon: mdi:flash
+ 
+  - platform: mqtt
+    name: "Watts"
+    state_topic: "tele/sonoff-monitor_energia_geral/SENSOR"
+    value_template: "{{ value_json.ENERGY.Power }}"
+    unit_of_measurement: "W"
+    icon: mdi:power-plug
+ 
+  - platform: mqtt
+    name: "Corrente"
+    state_topic: "tele/sonoff-monitor_energia_geral/SENSOR"
+    value_template: "{{ value_json.ENERGY.Current }}"
+    unit_of_measurement: "A"
+    icon: mdi:power-socket
+ 
+ 
+  - platform: mqtt
+    name: "Consumo Diário"
+    state_topic: "tele/sonoff-monitor_energia_geral/SENSOR"
+    value_template: "{{ value_json.ENERGY.Today }}"
+    unit_of_measurement: "kWh"
+    icon: mdi:power-socket-eu
+ 
+  - platform: mqtt
+    name: "Consumo dia Anterior"
+    state_topic: "tele/sonoff-monitor_energia_geral/SENSOR"
+    value_template: "{{ value_json.ENERGY.Yesterday }}"
+    unit_of_measurement: "kWh"
+    icon: mdi:power-socket-eu
+ 
+  - platform: mqtt
+    name: "Consumo Total"
+    state_topic: "tele/sonoff-monitor_energia_geral/SENSOR"
+    value_template: "{{ value_json.ENERGY.Total }}"
+    unit_of_measurement: "kWh"
+    icon: mdi:power-socket-eu
+
+
+###Calculando consumo energetico em reais
+  - platform: template
+    sensors:
+      energy_brl_hoje:
+        friendly_name: Consumo Hoje BRL
+        value_template: '{{ (states("sensor.consumo_diario") | int(states("sensor.consumo_diario"), 16 )  * (states("input_text.box1") | float)) | round(2) }}'
+        unit_of_measurement: 'R$'
+      energy_brl_ontem:
+        friendly_name: Consumo Ontem BRL
+        value_template: '{{ (states("sensor.consumo_dia_anterior") | int(states("sensor.consumo_dia_anterior"), 16 )  * (states("input_text.box1") | float)) | round(2) }}'
+        unit_of_measurement: 'R$'
+      energy_brl_total:
+        friendly_name: Consumo Total BRL
+        value_template: '{{ (states("sensor.consumo_total") | int(states("sensor.consumo_total"), 16 )  * (states("input_text.box1") | float)) | round(2) }}'
+        unit_of_measurement: 'R$'
+###Sensores em teste no utility meter
+      # cons_energia_brl_hora:
+      #   friendly_name: Consumo BRL Hora
+      #   value_template: '{{ (states("sensor.cons_energ_hora1") | int(states("sensor.cons_energ_hora1"), 16 )  * (states("input_text.box1") | float)) | round(2) }}'
+      #   unit_of_measurement: 'R$'
+      # cons_energia_brl_dia:
+      #   friendly_name: Consumo BRL Dia
+      #   value_template: '{{ (states("sensor.cons_energ_dia1") | int(states("sensor.cons_energ_dia1"), 16 )  * (states("input_text.box1") | float)) | round(2) }}'
+      #   unit_of_measurement: 'R$'
+      # cons_energia_brl_semana:
+      #   friendly_name: Consumo BRL Semana
+      #   value_template: '{{ (states("sensor.cons_energ_semana1") | int(states("sensor.cons_energ_semana1"), 16 )  * (states("input_text.box1") | float)) | round(2) }}'
+      #   unit_of_measurement: 'R$'
+      # cons_energia_brl_mes:
+      #   friendly_name: Consumo BRL Mes
+      #   value_template: '{{ (states("sensor.cons_energ_mes1") | int(states("sensor.cons_energ_mes1"), 16 )  * (states("input_text.box1") | float)) | round(2) }}'
+      #   unit_of_measurement: 'R$'
+      # cons_energia_brl_ano:
+      #   friendly_name: Consumo BRL Ano
+      #   value_template: '{{ (states("sensor.cons_energ_ano1") | int(states("sensor.cons_energ_ano1"), 16 )  * (states("input_text.box1") | float)) | round(2) }}'
+      #   unit_of_measurement: 'R$'
+
+# systemmonitor
+#                 _                                       _ _             
+#                | |                                     (_) |            
+#   ___ _   _ ___| |_ ___ _ __ ___  _ __ ___   ___  _ __  _| |_ ___  _ __ 
+#  / __| | | / __| __/ _ \ '_ ` _ \| '_ ` _ \ / _ \| '_ \| | __/ _ \| '__|
+#  \__ \ |_| \__ \ ||  __/ | | | | | | | | | | (_) | | | | | || (_) | |   
+#  |___/\__, |___/\__\___|_| |_| |_|_| |_| |_|\___/|_| |_|_|\__\___/|_|   
+#        __/ |                                                            
+#       |___/  
+
+  - platform: systemmonitor
+    resources:
+      - type: disk_free
+        arg: /
+      - type: disk_use
+        arg: /
+      - type: disk_use_percent
+        arg: /
+      - type: memory_free
+      - type: memory_use
+      - type: memory_use_percent
+      - type: processor_use
+      - type: last_boot
+
+  - platform: uptime
+    name: Uptime
+  - platform: version
+    name: Versao
+  - platform: command_line
+    name: CPU Temperatura
+    command: "cat /sys/class/thermal/thermal_zone0/temp"
+    unit_of_measurement: "°C"
+    value_template: '{{ value | multiply(0.001) | round(1) }}'
+
+# App TTLock Integration
+#  _______ _______ _                _      _____       _                       _   _             
+# |__   __|__   __| |              | |    |_   _|     | |                     | | (_)            
+#    | |     | |  | |     ___   ___| | __   | |  _ __ | |_ ___  __ _ _ __ __ _| |_ _  ___  _ __  
+#    | |     | |  | |    / _ \ / __| |/ /   | | | '_ \| __/ _ \/ _` | '__/ _` | __| |/ _ \| '_ \ 
+#    | |     | |  | |___| (_) | (__|   <   _| |_| | | | ||  __/ (_| | | | (_| | |_| | (_) | | | |
+#    |_|     |_|  |______\___/ \___|_|\_\ |_____|_| |_|\__\___|\__, |_|  \__,_|\__|_|\___/|_| |_|
+#                                                               __/ |                            
+#                                                              |___/                             
+# https://open.ttlock.com/
+# https://open.ttlock.com/doc/api
+# https://play.google.com/store/apps/details?id=com.tongtongsuo.app
+# https://apps.apple.com/us/app/ttlock/id1033046018
+    
+  # - platform: time_date
+  #   display_options: 
+  #     - 'date_time_iso'
+        
+  # - platform: template
+  #   sensors:
+  #     timestamp:
+  #       value_template: '{{ ((as_timestamp(states.sensor.date_time_iso.state) | int) * 1000) }}'
+  #     timestamp_now:
+  #       value_template: '{{ ((as_timestamp(now()) | int) * 1000) }}' #usando now() não atualiza o valor
+    
+  # - platform: rest
+  #   name: Lock Battery (sensor.timestamp)
+  #   resource_template: https://api.ttlock.com/v3/lock/queryElectricQuantity?clientId=074b150b53d242e6a92cc886b75cb8f3&accessToken=8a92c9fcadec9e24f97c017f1b1015b3&lockId=1714418&date={{ states('sensor.timestamp') }}
+  #   value_template: '{{ value_json.electricQuantity }}'
+  #   device_class: battery
+  #   unit_of_measurement: "%"
+
+  - platform: rest
+    name: Lock Battery
+    resource_template: https://api.ttlock.com/v3/lock/queryElectricQuantity?clientId=074b150b53d242e6a92cc886b75cb8f3&accessToken=8a92c9fcadec9e24f97c017f1b1015b3&lockId=1714418&date={{ ((as_timestamp(now()) | int) * 1000) }}
+    value_template: '{{ value_json.electricQuantity }}'
+    device_class: battery
+    unit_of_measurement: "%"
+
+  - platform: rest
+    name: Get Lock Open State
+    resource_template: https://api.ttlock.com/v3/lock/queryOpenState?clientId=074b150b53d242e6a92cc886b75cb8f3&accessToken=8a92c9fcadec9e24f97c017f1b1015b3&lockId=1714418&date={{ ((as_timestamp(now()) | int) * 1000) }}
+    value_template: '{{ value_json.state }}'
+
+  - platform: template
+    sensors:
+      lock_open_state:
+        friendly_name: 'Lock Open State'
+        value_template: >-
+          {% if states('binary_sensor.lock_open_state') == "off" %}
+            {{ states('binary_sensor.lock_open_state') }} - Porta Trancada
+          {% elif states('binary_sensor.lock_open_state') == "on" %}
+            Porta Destrancada
+          {% else %}
+            Status Desconhecido
+          {% endif %}
+        icon_template: >-
+          {% if states('binary_sensor.lock_open_state') == "off" %}
+            mdi:door-closed-lock
+          {% elif states('binary_sensor.lock_open_state') == "on" %}
+            mdi:door-closed
+          {% else %}
+            mdi:sync-off
+          {% endif %}
+

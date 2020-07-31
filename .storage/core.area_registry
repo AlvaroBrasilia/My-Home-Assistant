@@ -1,0 +1,32 @@
+{
+    "data": {
+        "areas": [
+            {
+                "id": "6ef2f63dc5044e53a442c6d51f8187cb",
+                "name": "Sala de estar"
+            },
+            {
+                "id": "6681723e5fb64ee9889bc0af463d09b4",
+                "name": "Cozinha"
+            },
+            {
+                "id": "3c6630478f2a4bdbb159e23a14b7a3e7",
+                "name": "Quarto"
+            },
+            {
+                "id": "65db4ee2b4744a468e1cb26ee6162d4f",
+                "name": "Quarto Jo\u00e3o"
+            },
+            {
+                "id": "41274d80353b45d8af337fdba3549894",
+                "name": "Escrit\u00f3rio"
+            },
+            {
+                "id": "bcd679b7e8b44605b3d012c0807698dd",
+                "name": "Escada"
+            }
+        ]
+    },
+    "key": "core.area_registry",
+    "version": 1
+}

@@ -1,0 +1,25 @@
+{
+    "data": {
+        "items": [
+            {
+                "device_trackers": [
+                    "device_tracker.m20_4g",
+                    "device_tracker.mi_9"
+                ],
+                "id": "49501d305ef6491aba7d4e1b1ee946b1",
+                "name": "Alvaro Luiz",
+                "user_id": "7e959263cfc94b2580697900cf76605b"
+            },
+            {
+                "device_trackers": [
+                    "device_tracker.mi_a2_lite"
+                ],
+                "id": "aa2882702f07406e96022a0c24ca9d97",
+                "name": "Jo\u00e3o Guilherme",
+                "user_id": "c71e494186834947be7f7bb8ad491194"
+            }
+        ]
+    },
+    "key": "person",
+    "version": 2
+}

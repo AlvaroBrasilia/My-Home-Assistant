@@ -1,0 +1,121 @@
+esphome:
+  name: interruptor_sonoff_sala
+  platform: ESP8266
+  board: esp01_1m
+
+wifi:
+  ssid: "Wi-Fi Gratis"
+  password: "naotemsenha"
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+################################################
+binary_sensor:
+
+  # Botão 1
+  - platform: gpio
+    pin:
+      number: GPIO0
+      mode: INPUT_PULLUP
+      inverted: True
+    name: "Interruptor Sala de Jantar"
+    on_press:
+      - light.toggle: lightsw_1
+    internal: True
+
+  # Botão 2
+  - platform: gpio
+    pin:
+      number: GPIO9
+      mode: INPUT_PULLUP
+      inverted: True
+    name: "Interruptor Sala de TV"
+    on_press:
+      - light.toggle: lightsw_2
+    internal: True
+  
+  # Botão 3
+  - platform: gpio
+    pin:
+      number: GPIO10
+      mode: INPUT_PULLUP
+      inverted: True
+    name: "Interruptor Garagem"
+    on_press:
+      - light.toggle: lightsw_3
+    internal: True
+  
+################################################
+output:
+
+  # Saída do Botão 1
+  - platform: gpio
+    pin: GPIO12
+    id: relay_1
+    power_supply: blue_led_1
+
+  # Saída do Botão 2
+  - platform: gpio
+    pin: GPIO5
+    id: relay_2
+    power_supply: blue_led_2
+
+  # Saída do Botão 3
+  - platform: gpio
+    pin: GPIO4
+    id: relay_3
+    power_supply: blue_led_3
+    
+# Mostrar no HA como light ################################################
+light:
+
+  # Botão 1
+  - platform: binary
+    name: "Luz Sala de Jantar"   
+    id: lightsw_1
+    output: relay_1
+    
+  # Botão 2
+  - platform: binary
+    name: "Luz Sala de TV"   
+    id: lightsw_2
+    output: relay_2
+    
+  # Botão 3
+  - platform: binary
+    name: "Luz Garagem"   
+    id: lightsw_3
+    output: relay_3
+    
+    
+# Intercala cor dos LEDS ################################################
+power_supply:
+
+  # Botão 1
+  - id: blue_led_1
+    enable_time: 0s
+    keep_on_time: 0s
+    pin:
+      number: GPIO0
+      inverted: True
+      
+  # Botão 2
+  - id: blue_led_2
+    enable_time: 0s
+    keep_on_time: 0s
+    pin:
+      number: GPIO9
+      inverted: True
+      
+  # Botão 3
+  - id: blue_led_3
+    enable_time: 0s
+    keep_on_time: 0s
+    pin:
+      number: GPIO10
+      inverted: True

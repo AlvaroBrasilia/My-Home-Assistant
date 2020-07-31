@@ -1,0 +1,146 @@
+{
+    "data": {
+        "binary_sensor": {},
+        "deleted_ids": [
+            "7a6801b48cd1ee2bbda603fceec2d3cdfc9197b26bd7486f582b3617389e4e72"
+        ],
+        "sensor": {
+            "b8b4db390b9c7c310470b3edbf194b3f374096b42f4f998a55147dfbe1c21043_battery_level": {
+                "added": true,
+                "attributes": {},
+                "device_class": "battery",
+                "icon": "mdi:battery-40",
+                "name": "Battery Level",
+                "state": 47,
+                "type": "sensor",
+                "unique_id": "battery_level",
+                "unit_of_measurement": "%",
+                "webhook_id": "b8b4db390b9c7c310470b3edbf194b3f374096b42f4f998a55147dfbe1c21043"
+            },
+            "b8b4db390b9c7c310470b3edbf194b3f374096b42f4f998a55147dfbe1c21043_battery_state": {
+                "added": true,
+                "attributes": {
+                    "charger_type": "unknown",
+                    "is_charging": false
+                },
+                "device_class": "battery",
+                "icon": "mdi:battery-40",
+                "name": "Battery State",
+                "state": "discharging",
+                "type": "sensor",
+                "unique_id": "battery_state",
+                "webhook_id": "b8b4db390b9c7c310470b3edbf194b3f374096b42f4f998a55147dfbe1c21043"
+            },
+            "b8b4db390b9c7c310470b3edbf194b3f374096b42f4f998a55147dfbe1c21043_geocoded_location": {
+                "added": true,
+                "attributes": {
+                    "Administrative Area": "Distrito Federal",
+                    "Country": "Brasil",
+                    "ISO Country Code": "BR",
+                    "Locality": null,
+                    "Location": [
+                        -15.887903099999999,
+                        -47.811683699999996
+                    ],
+                    "Postal Code": "70297-400",
+                    "Sub Administrative Area": "Bras\u00edlia",
+                    "Sub Locality": "S\u00e3o Sebasti\u00e3o",
+                    "Sub Thoroughfare": "27",
+                    "Thoroughfare": null
+                },
+                "icon": "mdi:map",
+                "name": "Geocoded Location",
+                "state": "27 - Jardins Mangueiral - S\u00e3o Sebasti\u00e3o, Bras\u00edlia - DF, 70297-400, Brasil",
+                "type": "sensor",
+                "unique_id": "geocoded_location",
+                "webhook_id": "b8b4db390b9c7c310470b3edbf194b3f374096b42f4f998a55147dfbe1c21043"
+            },
+            "b8b4db390b9c7c310470b3edbf194b3f374096b42f4f998a55147dfbe1c21043_wifi_connection": {
+                "added": true,
+                "attributes": {
+                    "bssid": "98:1e:19:13:1a:2f",
+                    "frequency": 2432,
+                    "ip_address": "192.168.0.21",
+                    "is_hidden": false,
+                    "link_speed": 86,
+                    "signal_level": -61
+                },
+                "icon": "mdi:wifi-strength-2",
+                "name": "Wifi Connection",
+                "state": "Wi-Fi Gratis",
+                "type": "sensor",
+                "unique_id": "wifi_connection",
+                "webhook_id": "b8b4db390b9c7c310470b3edbf194b3f374096b42f4f998a55147dfbe1c21043"
+            },
+            "faf4367d0dade8ee42f15e14fea1a4d4f2e2dc317324fc4eacb23ad3a76a4572_battery_level": {
+                "added": true,
+                "attributes": {},
+                "device_class": "battery",
+                "icon": "mdi:battery-60",
+                "name": "Battery Level",
+                "state": 61,
+                "type": "sensor",
+                "unique_id": "battery_level",
+                "unit_of_measurement": "%",
+                "webhook_id": "faf4367d0dade8ee42f15e14fea1a4d4f2e2dc317324fc4eacb23ad3a76a4572"
+            },
+            "faf4367d0dade8ee42f15e14fea1a4d4f2e2dc317324fc4eacb23ad3a76a4572_battery_state": {
+                "added": true,
+                "attributes": {
+                    "charger_type": "ac",
+                    "is_charging": true
+                },
+                "device_class": "battery",
+                "icon": "mdi:battery-charging-60",
+                "name": "Battery State",
+                "state": "charging",
+                "type": "sensor",
+                "unique_id": "battery_state",
+                "webhook_id": "faf4367d0dade8ee42f15e14fea1a4d4f2e2dc317324fc4eacb23ad3a76a4572"
+            },
+            "faf4367d0dade8ee42f15e14fea1a4d4f2e2dc317324fc4eacb23ad3a76a4572_geocoded_location": {
+                "added": true,
+                "attributes": {
+                    "Administrative Area": "Distrito Federal",
+                    "Country": "Brasil",
+                    "ISO Country Code": "BR",
+                    "Locality": null,
+                    "Location": [
+                        -15.887903099999999,
+                        -47.811683699999996
+                    ],
+                    "Postal Code": "70297-400",
+                    "Sub Administrative Area": "Bras\u00edlia",
+                    "Sub Locality": "S\u00e3o Sebasti\u00e3o",
+                    "Sub Thoroughfare": "27",
+                    "Thoroughfare": null
+                },
+                "icon": "mdi:map",
+                "name": "Geocoded Location",
+                "state": "27 - Jardins Mangueiral - S\u00e3o Sebasti\u00e3o, Bras\u00edlia - DF, 70297-400, Brasil",
+                "type": "sensor",
+                "unique_id": "geocoded_location",
+                "webhook_id": "faf4367d0dade8ee42f15e14fea1a4d4f2e2dc317324fc4eacb23ad3a76a4572"
+            },
+            "faf4367d0dade8ee42f15e14fea1a4d4f2e2dc317324fc4eacb23ad3a76a4572_wifi_connection": {
+                "added": true,
+                "attributes": {
+                    "bssid": "98:1e:19:13:1a:30",
+                    "frequency": 5240,
+                    "ip_address": "192.168.0.8",
+                    "is_hidden": false,
+                    "link_speed": 6,
+                    "signal_level": -62
+                },
+                "icon": "mdi:wifi-strength-2",
+                "name": "Wifi Connection",
+                "state": "Wi-Fi Gratis 5GHZ",
+                "type": "sensor",
+                "unique_id": "wifi_connection",
+                "webhook_id": "faf4367d0dade8ee42f15e14fea1a4d4f2e2dc317324fc4eacb23ad3a76a4572"
+            }
+        }
+    },
+    "key": "mobile_app",
+    "version": 1
+}
