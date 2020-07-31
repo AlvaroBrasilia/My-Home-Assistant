@@ -104,7 +104,7 @@ camera:
 input_text:
   box1:
     name: "Valor kW/h"
-    initial: "0.800"
+    initial: "0.900"
 
 #
 #    _____                     _   _______        _   
